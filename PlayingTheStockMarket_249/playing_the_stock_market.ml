@@ -1,5 +1,6 @@
 open Printf
 
+(* Function to generate all valid stock purchases and how much would be made on the sale *)
 let rec generate_diffs accum items  = 
     let difference tick1 tick2 = (tick2 -. tick1, tick1, tick2) in
     match items with
