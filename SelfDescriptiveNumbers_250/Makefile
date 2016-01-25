@@ -1,7 +1,10 @@
-all: evolutionary_algorithm.native
+all: SelfDescriptiveNumbers.native
 
-evolutionary_algorithm.native: evolutionary_algorithm.ml
-		ocamlbuild -r -use-ocamlfind -pkg core -tag thread evolutionary_algorithm.native
+SelfDescriptiveNumbers.native: SelfDescriptiveNumbers.ml
+		ocamlbuild -r -use-ocamlfind -pkg core -tag thread SelfDescriptiveNumbers.native
 
 clean:
 		ocamlbuild -clean
+
+debug:
+		ocamlbuild -r -use-ocamlfind -pkg core -tag thread -tag debug SelfDescriptiveNumbers.byte
